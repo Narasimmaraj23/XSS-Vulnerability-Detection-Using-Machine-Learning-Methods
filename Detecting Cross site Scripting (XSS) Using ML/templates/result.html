@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	body{background-image: url("static/image/image8.gif")
+	
+	}
+</style>
+	
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		
+		<h2 style="color:b;lack; text-align: center;">XSS vulnerability Detector </h2>
+		
+	</div>
+	</header>
+	
+	<div class="results">
+
+
+		
+	{% if prediction == 1%}
+	<h2 style="color:#34eb37;text-align: center;">Don't worry it's ok safe</h2>
+		  
+	{% elif prediction ==0%}
+	<h2 style="color:#de2909;text-align: center;">XSS vulnerabilities attack</h2>
+	
+	{% endif %}
+
+	</div>
+
+</body>
+</html>

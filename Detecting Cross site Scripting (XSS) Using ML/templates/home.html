@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+
+.container {
+  padding: 1px;
+  text-align: center;
+  background: #27587d;
+  color: white;
+  font-size: 30px;
+}
+
+textarea {
+	width: 600px;
+	height: 40px;
+	border: 3px solid #cccccc;
+	padding: 5px;
+	margin:left:px;
+	font-family: Tahoma, sans-serif;
+	background-position: bottom center;
+	background-repeat: no-repeat;
+	text-align: justify;
+    -moz-text-align-last: center; /* Firefox 12+ */
+    text-align-last: center;
+}
+.ml-container{text-align: justify;
+    -moz-text-align-last: center; /* Firefox 12+ */
+    text-align-last: center;}
+	input[type=submit] {
+    padding:5px 15px; 
+    background:#031cfc; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
+body{background-image: url("static/image/image6.gif")
+	}
+	.button {
+  position: relative;
+  background-color: #4CAF50;
+  border: none;
+  font-size: 28px;
+  color: #FFFFFF;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.button:after {
+  content: "";
+  background: #f1f1f1;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+</style>
+	<title>Home</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		
+		<h2 style="text-align: center; font-variant: small-caps;"> Cross site websites Scanner </h2>
+		<h3 style="text-align: center; font-variant: small-caps;"></h3>
+		
+	</div>
+	</header>
+
+	<div class="ml-container">
+
+		<form action="{{ url_for('predict')}}" method="POST">
+		<p></p>
+		<!-- <input type="text" name="comment"/> -->
+		<textarea type=text name="text"></textarea>
+		<br/>
+
+		<input type="submit" class="button" value="Start Now">
+		
+	</form>
+		
+	</div>
+
+	
+	
+
+</body>
+</html>
